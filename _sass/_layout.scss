@@ -1,0 +1,101 @@
+/******************************************************************************
+ * Content
+ ******************************************************************************/
+
+body {
+  padding-bottom: 70px;
+  color: var(--global-text-color);
+  background-color: var(--global-bg-color);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    scroll-margin-top: 66px;
+  }
+}
+
+body.fixed-top-nav {
+  // Add some padding for the nav-bar.
+  padding-top: 56px;
+}
+
+body.sticky-bottom-footer {
+  // Remove padding below footer.
+  padding-bottom: 0;
+}
+
+.container {
+  max-width: $max-content-width;
+}
+
+// Profile
+.profile {
+  img {
+    width: 100%;
+  }
+}
+
+.homepage-img {
+  min-width: 100%;
+  max-height: 15rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+
+  img {
+    border-radius: 0;
+  }
+}
+
+.row.max-15 {
+  max-height: 15rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.form-control {
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0;
+}
+
+.bootstrap-table .fixed-table-container.fixed-height:not(.has-footer),
+.bootstrap-table .fixed-table-container.fixed-height .table thead th,
+.table-bordered td,
+.table-bordered th {
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.table-bordered td,
+.table-bordered th {
+  border: 1px solid var(--global-divider-color);
+}
+
+table.table thead th {
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.pagination .page-item.active .page-link,
+.pagination .page-item .page-link:hover {
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+.example swiper-slide {
+  height: 34rem;
+}
+
+.example swiper-slide figure {
+  height: 100%;
+}
+
+.example swiper-slide figure img {
+  height: 100%;
+  width: auto;
+  min-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
