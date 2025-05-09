@@ -34,6 +34,13 @@ body.fixed-top-nav {
   }
 }
 
+html[data-theme="dark"] {
+  .homepage-img img,
+  .homepage-img ~ div.clearfix > h3 ~ p:first-of-type img {
+    filter: invert(1);
+  }
+}
+
 .homepage-img ~ div.clearfix > h3 ~ p:first-of-type {
   display: inline-flex;
   float: right;
