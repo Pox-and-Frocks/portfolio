@@ -34,7 +34,7 @@ body.fixed-top-nav {
   }
 }
 
-.homepage-img ~ div.clearfix h3 ~ p:first-of-type {
+.homepage-img ~ div.clearfix > h3 ~ p:first-of-type {
   display: inline-flex;
   float: right;
 
