@@ -1,11 +1,10 @@
 ---
 layout: page
-title: Research
+title: Work With Me
 permalink: /research/
-description: A collection of your projects.
 nav: true
 nav_order: 2
-display_categories: [planning, data]
+display_categories: [Freelance Rates, Weekly Availability]
 horizontal: false
 ---
 
@@ -17,22 +16,20 @@ horizontal: false
   <a id="{{ category }}" href=".#{{ category }}">
     <h2 class="category">{{ category }}</h2>
   </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
   <!-- Generate cards for each project -->
-  {% if page.horizontal %}
+  {% if category == "Freelance Rates" %}
   <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
+    <div class="row row-cols-1">
+       <div class="flex"><h3 class="d-inline-flex">Standard Rate</h3><span>: 40£/hr</span></div>
+       <div class="flex"><h3 class="d-inline-flex">Sliding Scale</h3><span>: Feel free to <a href="/cv/#basics-1" target="_blank">contact me</a> with details for more info!</span></div>
     </div>
   </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
+  {% else if category == "Weekly Availability" %}
+  <div class="container">
+    <div class="d-flex justify-content-between">
+       <p>Free two days a week to spelunk in the archives.</p>
+       <img class="cats" src="/assets/img/cats.png" alt="Cat Illustration">
+    </div>
   </div>
   {% endif %}
   {% endfor %}

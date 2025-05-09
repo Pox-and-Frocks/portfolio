@@ -166,21 +166,5 @@
         "Filemaker"
       ]
     }
-  ],
-  "interests": [
-    {
-      "name": "Cats",
-      "icon": "fa-solid fa-cat",
-      "keywords": [
-        "Has a really cute cat called Cosan"
-      ]
-    },
-    {
-      "name": "Antiques",
-      "icon": "fa-solid fa-trophy",
-      "keywords": [
-        "Possesses a storied collection of antique clothing and furniture"
-      ]
-    }
   ]
 }

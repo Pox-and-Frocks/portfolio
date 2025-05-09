@@ -31,6 +31,30 @@ h6 {
   font-family: $font-family-serif-fallback;
 }
 
+p,
+span:not(.cv span),
+a:not(a.nav-link):not(h2 a):not(.fixed-bottom a):not(.bibliography .links a):not(.cv a) {
+  font-size: 1.8rem;
+
+  @media (max-width: 570px) {
+    font-size: 1.4rem;
+  }
+}
+
+a.nav-link {
+  font-size: 1rem;
+}
+
+h3,
+.h3,
+.h3 a {
+  font-size: 2.5rem;
+
+  @media (max-width: 570px) {
+    font-size: 2.2rem;
+  }
+}
+
 h1,
 h2,
 h2 a,
@@ -40,18 +64,23 @@ h3 {
 
 .h1,
 h1 {
-  font-size: 5rem;
+  font-size: 5.5rem;
   font-weight: bold;
 
-  @media (max-width: 500px) {
+  @media (max-width: 570px) {
     font-size: 4.5rem;
   }
 }
 
 .h2,
-h2 {
+h2,
+h2 a {
   text-transform: capitalize;
-  font-size: 3rem;
+  font-size: 4rem;
+
+  @media (max-width: 570px) {
+    font-size: 3.5rem;
+  }
 }
 
 .nav > li > a {
@@ -264,7 +293,7 @@ ul.task-list input[type="checkbox"] {
   margin-right: 1rem;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 658px) {
   .profile {
     width: 30%;
 
@@ -278,7 +307,6 @@ ul.task-list input[type="checkbox"] {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
 
   a {
     color: inherit;
@@ -612,7 +640,7 @@ footer.sticky-bottom {
 
   h2.category {
     color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
+    border-bottom: 3px double var(--global-divider-color);
     padding-top: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 1rem;
@@ -1009,11 +1037,14 @@ nav[data-toggle="toc"] {
   }
 
   .nav > li > a {
+    line-height: initial;
     color: var(--global-text-color);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
 
     &:hover {
-      color: var(--global-hover-color);
+      color: transparent;
+      background-image: linear-gradient(80deg,rgba(178, 68, 68, 1) 6%, rgba(218, 145, 42, 1) 21%, rgba(211, 177, 66, 1) 34%, rgba(34, 136, 92, 1) 48%, rgba(41, 135, 213, 1) 63%, rgba(16, 47, 109, 1) 76%, rgba(97, 23, 119, 1) 90%);
+      background-clip: text;
       border-left-color: var(--global-hover-color);
     }
   }
@@ -1033,7 +1064,7 @@ nav[data-toggle="toc"] {
 }
 
 /* small screens */
-@media (max-width: 576px) {
+@media (max-width: 658px) {
   /* override stickyness so that the navigation does not follow scrolling */
   nav[data-toggle="toc"] {
     visibility: hidden;
