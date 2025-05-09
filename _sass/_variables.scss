@@ -6,30 +6,30 @@
 @use "sass:color";
 
 // Colors
-$red-color: #ff3636 !default;
-$red-color-dark: #b71c1c !default;
-$orange-color: #f29105 !default;
-$blue-color: #0076df !default;
-$blue-color-dark: #00369f !default;
+$red-color: #b24444 !default;
+$red-color-dark: #932c2c !default;
+$orange-color: #da912a !default;
+$blue-color: #2987d5 !default;
+$blue-color-dark: #102f6d !default;
 $cyan-color: #2698ba !default;
 $light-cyan-color: color.adjust($cyan-color, $lightness: 25%);
-$green-color: #00ab37 !default;
+$green-color: #22885c !default;
 $green-color-lime: #b7d12a !default;
-$green-color-dark: #009f06 !default;
+$green-color-dark: #155c18 !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
-$purple-color: #b509ac !default;
+$purple-color: #611777 !default;
 $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
-$yellow-color: #efcc00 !default;
+$yellow-color: #d3b142 !default;
 
 $grey-color: #828282 !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
 $grey-color-dark: #1c1c1d;
 $grey-900: #212529;
 
-$white-color: #ffffff !default;
+$white-color: #ece8df !default;
 $black-color: #000000 !default;
 
 // Theme colors
@@ -50,3 +50,27 @@ $back-to-top-right: 30px;
 $back-to-top-diameter: 40px;
 $back-to-top-height: $back-to-top-diameter;
 $back-to-top-width: $back-to-top-diameter;
+
+//font
+@font-face {
+  font-family: 'EnglishTowne';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/EnglishTowne_2.ttf') format('ttf');
+}
+
+@mixin font-face($family, $src, $weight, $style) {
+  @font-face {
+    font-family: $family;
+    src:
+      url("#{$src}.ttf") format("woff2");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+@include font-face("EnglishTowne", "../fonts/EnglishTowne_2", 100 900, normal);
+
+$font-family-serif-fallback: "Times New Roman", Times, sans-serif;
+$font-family-serif: "EnglishTowne", $font-family-serif-fallback;

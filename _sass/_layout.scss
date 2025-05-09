@@ -20,6 +20,27 @@ body {
 body.fixed-top-nav {
   // Add some padding for the nav-bar.
   padding-top: 56px;
+
+  a.navbar-brand.title,
+  a.navbar-brand.title span {
+    font-size: 1.6rem;
+    font-family: $font-family-serif;
+  }
+
+  img.navicon {
+    max-height: 1.7rem;
+    width: auto;
+    margin-right: 0.5rem;
+  }
+}
+
+.homepage-img ~ div.clearfix h3 ~ p:first-of-type {
+  display: inline-flex;
+  float: right;
+
+  img {
+    max-width: 10rem;
+  }
 }
 
 body.sticky-bottom-footer {
@@ -40,7 +61,6 @@ body.sticky-bottom-footer {
 
 .homepage-img {
   min-width: 100%;
-  max-height: 15rem;
   margin-bottom: 1rem;
   overflow: hidden;
   box-shadow: none;

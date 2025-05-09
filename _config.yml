@@ -524,11 +524,7 @@ third_party_libraries:
 
 jekyll_get_json:
   - data: resume
-    json: assets/json/mt-resume.json # it can also be an url
-  - data: resume2
-    json: assets/json/gw-resume.json
-  - data: resume3
-    json: assets/json/ty-resume.json
+    json: assets/json/hdp-cv.json # it can also be an url
 jsonresume:
   - basics
   - work

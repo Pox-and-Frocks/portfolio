@@ -1,8 +1,8 @@
 ---
 layout: page
-title: research
+title: Research
 permalink: /research/
-description: A collection of the elements of your project.
+description: A collection of your projects.
 nav: true
 nav_order: 2
 display_categories: [planning, data]

@@ -3,7 +3,10 @@
   <nav id="navbar" class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}" role="navigation">
     <div class="container">
       {% if page.permalink != '/' %}
-        <a class="navbar-brand title font-weight-lighter" href="{{ site.baseurl }}">
+        <a class="navbar-brand title" href="{{ site.baseurl }}">
+          {% if site.icon %}
+          <img class="navicon" src="/assets/img/{{ site.icon }}" />
+          {% endif %}
           {% if site.title == 'blank' %}
             {% if site.first_name %}
               <span class="font-weight-bold">
@@ -17,7 +20,7 @@
               {{- site.last_name -}}
             {% endif %}
           {% else %}
-            {{- site.title -}}
+            <span>{{- site.title -}}</span>
           {% endif %}
         </a>
       {% elsif site.enable_navbar_social %}
